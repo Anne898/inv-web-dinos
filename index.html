@@ -31,33 +31,6 @@
       data-image-width="1080" data-image-height="1920" id="sec-2cfc">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
-          <script> // Función para actualizar la cuenta regresiva
-    function updateCountdown() {
-        const targetDate = new Date("2023-11-19T12:00:00Z"); // Fecha objetivo
-        const currentDate = new Date(); // Fecha actual
-        const timeDifference = targetDate - currentDate;
-        if (timeDifference <= 0) {
-            // La fecha objetivo ha pasado
-            document.getElementById("days").textContent = "0";
-            document.getElementById("hours").textContent = "0";
-            document.getElementById("minutes").textContent = "0";
-            document.getElementById("seconds").textContent = "0";
-            document.querySelector(".u-countdown-message p").textContent = "¡Es hora!";
-            return;
-        }
-        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-        document.getElementById("days").textContent = days;
-        document.getElementById("hours").textContent = hours;
-        document.getElementById("minutes").textContent = minutes;
-        document.getElementById("seconds").textContent = seconds;
-    }
-    // Actualizar la cuenta regresiva cada segundo
-    setInterval(updateCountdown, 1000);
-    // Llamar a la función para inicializar la cuenta regresiva
-    updateCountdown(); </script>
           <div id="boton" class="icon-social">
             <audio id="MusicaFondo"></audio>
             <a onclick="MusicaFondo()" class="float">
@@ -109,67 +82,177 @@ function MusicaFondo() {
       data-image-width="1080" data-image-height="1920" id="carousel_fec0">
       <div class="u-clearfix u-sheet u-sheet-1"></div>
     </section>
+
+<!--
     <section class="u-align-center u-clearfix u-image u-section-3" src
-      data-image-width="1080" data-image-height="1920" id="sec-f8c3">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div
-          class="u-border-9 u-border-custom-color-62 u-countdown u-custom-color-62 u-radius-20 u-countdown-1"
-          data-timer-id="1c81" data-type="to-date"
-          data-target-date="Sat, 14 Oct 2023 22:00:38 GMT" data-for="everyone"
-          data-direction="down" data-time-left="750m" data-target-number="100"
-          data-start-time="Mon Sep 11 2023 22:49:00 GMT-0600 (Hora estándar central (México))"
-          data-frequency="1s" data-after-count="none"
-          data-redirect-url="https://">
-          <div class="u-countdown-wrapper u-spacing-20">
+    data-image-width="1080" data-image-height="1920" id="sec-f8c3">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div
+        class="u-border-9 u-border-custom-color-62 u-countdown u-custom-color-62 u-radius-20 u-countdown-1"
+        data-timer-id="1c81" data-type="to-date"
+        data-target-date="Sat, 14 Oct 2023 22:00:38 GMT" data-for="everyone"
+        data-direction="down" data-time-left="750m" data-target-number="100"
+        data-start-time="Mon Sep 11 2023 22:49:00 GMT-0600 (Hora estándar central (México))"
+        data-frequency="1s" data-after-count="none"
+        data-redirect-url="https://">
 
-            <div class="u-countdown-wrapper u-spacing-20">
-              <div class="u-countdown-item u-countdown-days u-spacing-10">
-                <div
-                  class="u-countdown-counter u-countdown-counter-2 u-text-custom-color-50"
-                  id="days">0</div>
-                <div
-                  class="u-countdown-label u-text-custom-color-53 u-countdown-label-2">DÍAS</div>
-              </div>
-              <div
-                class="u-countdown-separator u-text-custom-color-50 u-countdown-separator-2">:</div>
-              <div class="u-countdown-hours u-countdown-item u-spacing-10">
-                <div
-                  class="u-text-custom-color-50 u-countdown-counter u-countdown-counter-3"
-                  id="hours">0</div>
-                <div
-                  class="u-countdown-label u-text-custom-color-53 u-countdown-label-3">Horas</div>
-              </div>
-              <div
-                class="u-countdown-separator u-text-custom-color-50 u-countdown-separator-3">:</div>
-              <div class="u-countdown-item u-countdown-minutes u-spacing-10">
-                <div
-                  class="u-text-custom-color-50 u-countdown-counter u-countdown-counter-4"
-                  id="minutes">0</div>
-                <div
-                  class="u-countdown-label u-text-custom-color-53 u-countdown-label-4">Minutos</div>
-              </div>
-              <div
-                class="u-countdown-separator u-text-custom-color-50 u-countdown-separator-4">:</div>
-              <div class="u-countdown-item u-countdown-seconds u-spacing-10">
-                <div
-                  class="u-text-custom-color-50 u-countdown-counter u-countdown-counter-5"
-                  id="seconds">0</div>
-                <div
-                  class="u-countdown-label u-text-custom-color-53 u-countdown-label-5">Segundos</div>
-              </div>
-            </div>
-
+          
+        <div class="u-countdown-wrapper u-spacing-20">
+          <div class="u-countdown-item u-countdown-days u-spacing-10">
+            <div
+              class="u-countdown-counter u-countdown-counter-2 u-text-custom-color-50"
+              id="days">0</div>
+            <div
+              class="u-countdown-label u-text-custom-color-53 u-countdown-label-2">DÍAS</div>
           </div>
-
-
-
-
-          <div class="u-countdown-message u-hidden">
-            <p>Sorry, the time is up.</p>
+          <div
+            class="u-countdown-separator u-text-custom-color-50 u-countdown-separator-2">:</div>
+          <div class="u-countdown-hours u-countdown-item u-spacing-10">
+            <div
+              class="u-text-custom-color-50 u-countdown-counter u-countdown-counter-3"
+              id="hours">0</div>
+            <div
+              class="u-countdown-label u-text-custom-color-53 u-countdown-label-3">Horas</div>
+          </div>
+          <div
+            class="u-countdown-separator u-text-custom-color-50 u-countdown-separator-3">:</div>
+          <div class="u-countdown-item u-countdown-minutes u-spacing-10">
+            <div
+              class="u-text-custom-color-50 u-countdown-counter u-countdown-counter-4"
+              id="minutes">0</div>
+            <div
+              class="u-countdown-label u-text-custom-color-53 u-countdown-label-4">Minutos</div>
+          </div>
+          <div
+            class="u-countdown-separator u-text-custom-color-50 u-countdown-separator-4">:</div>
+          <div class="u-countdown-item u-countdown-seconds u-spacing-10">
+            <div
+              class="u-text-custom-color-50 u-countdown-counter u-countdown-counter-5"
+              id="seconds">0</div>
+            <div
+              class="u-countdown-label u-text-custom-color-53 u-countdown-label-5">Segundos</div>
           </div>
         </div>
+
+        <div class="u-countdown-message u-hidden">
+          <p>Sorry, the time is up.</p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+-->
+  <section class="u-align-center u-clearfix u-image u-section-3" src
+  data-image-width="1080" data-image-height="1920" id="sec-f8c3">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <div
+      class="u-border-9 u-border-custom-color-62 u-countdown u-custom-color-62 u-radius-20 u-countdown-1"
+      data-timer-id="1c81" data-type="to-date"
+      data-target-date="Mon, 23 Oct 2023 23:00:38 GMT" data-for="everyone"
+      data-direction="down" data-time-left="750m" data-target-number="100"
+      data-start-time="Mon Sep 11 2023 22:49:00 GMT-0600 (Hora estándar central (México))"
+      data-frequency="1s" data-after-count="none"
+      data-redirect-url="https://">
+      <div class="u-countdown-wrapper u-spacing-20">
+
+           
+      <div class="u-countdown-wrapper u-spacing-20">
+        <div class="u-countdown-item u-countdown-days u-spacing-10">
+          <div
+            class="u-countdown-counter u-countdown-counter-2 u-text-custom-color-50"
+            id="days">0</div>
+          <div
+            class="u-countdown-label u-text-custom-color-53 u-countdown-label-2">DÍAS</div>
+        </div>
+        <div
+          class="u-countdown-separator u-text-custom-color-50 u-countdown-separator-2">:</div>
+        <div class="u-countdown-hours u-countdown-item u-spacing-10">
+          <div
+            class="u-text-custom-color-50 u-countdown-counter u-countdown-counter-3"
+            id="hours">0</div>
+          <div
+            class="u-countdown-label u-text-custom-color-53 u-countdown-label-3">Horas</div>
+        </div>
+        <div
+          class="u-countdown-separator u-text-custom-color-50 u-countdown-separator-3">:</div>
+        <div class="u-countdown-item u-countdown-minutes u-spacing-10">
+          <div
+            class="u-text-custom-color-50 u-countdown-counter u-countdown-counter-4"
+            id="minutes">0</div>
+          <div
+            class="u-countdown-label u-text-custom-color-53 u-countdown-label-4">Minutos</div>
+        </div>
+        <div
+          class="u-countdown-separator u-text-custom-color-50 u-countdown-separator-4">:</div>
+        <div class="u-countdown-item u-countdown-seconds u-spacing-10">
+          <div
+            class="u-text-custom-color-50 u-countdown-counter u-countdown-counter-5"
+            id="seconds">0</div>
+          <div
+            class="u-countdown-label u-text-custom-color-53 u-countdown-label-5">Segundos</div>
+        </div>
+      </div>
+
+
+      </div>
+      <div class="u-countdown-message u-hidden">
+        <p>Sorry, the time is up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <script> // Función para actualizar la cuenta regresiva
+      function updateCountdown() {
+          const targetDate = new Date("2023-11-19T14:00:00"); // Fecha objetivo
+          const currentDate = new Date(); // Fecha actual
+          const timeDifference = targetDate - currentDate;
+          if (timeDifference <= 0) {
+              // La fecha objetivo ha pasado
+              document.getElementById("days").textContent = "0";
+              document.getElementById("hours").textContent = "0";
+              document.getElementById("minutes").textContent = "0";
+              document.getElementById("seconds").textContent = "0";
+              document.querySelector(".u-countdown-message p").textContent = "¡Es hora!";
+              return;
+          }
+          const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+          document.getElementById("days").textContent = days;
+          document.getElementById("hours").textContent = hours;
+          document.getElementById("minutes").textContent = minutes;
+          document.getElementById("seconds").textContent = seconds;
+      }
+      // Actualizar la cuenta regresiva cada segundo
+      setInterval(updateCountdown, 1000);
+      // Llamar a la función para inicializar la cuenta regresiva
+      updateCountdown(); </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="u-align-center u-clearfix u-image u-section-4" src
       data-image-width="1080" data-image-height="1920" id="sec-a9e6">
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -213,6 +296,5 @@ function MusicaFondo() {
         </a>
       </div>
     </section>
-
 
   </body></html>
